@@ -133,11 +133,11 @@ const App = () => {
             tabIndex={1}
             onClick={() => console.log('clicked')}
         >
-            <Header />
+            <Header activePosition={activePosition} />
             <Routes>
                 <Route path="/" element={<RouteMain components={components} activePosition={activePosition} />} />
             </Routes>
-            <Footer />
+            <Footer activePosition={activePosition} />
         </div>
     );
 };

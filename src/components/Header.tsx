@@ -1,14 +1,23 @@
 import { memo } from 'react';
 import { HeaderWrapper } from '../styles/Header.style';
-import LogoWhite from '../assets/images/logo-white.png';
 import Hamburger from './Hamburger';
 
-const Header = () => {
+const Header = ({ activePosition }: { activePosition: number }) => {
+    const isDark = (): boolean => {
+        switch (activePosition) {
+            case 1:
+                return true;
+            case 2:
+                return false;
+            default:
+                return true;
+        }
+    };
     return (
-        <HeaderWrapper>
+        <HeaderWrapper isDark={isDark()}>
             <div>
                 <div className="logo">
-                    <img src={LogoWhite} alt="Logo" />
+                    <h2>Mikael.</h2>
                 </div>
                 <ul>
                     <li>

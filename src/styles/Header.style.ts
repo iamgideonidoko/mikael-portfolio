@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const HeaderWrapper = styled.div`
+interface Props {
+    isDark: boolean;
+}
+
+export const HeaderWrapper = styled.div<Props>`
     /* background: #00000020; */
     display: flex;
     justify-content: space-between;
@@ -9,12 +13,18 @@ export const HeaderWrapper = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 20;
     width: 100%;
+    transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
+    color: ${(props) => (props.isDark ? 'white' : 'black')};
 
     & .logo {
         img {
             width: 97px;
+        }
+
+        h2 {
+            font-size: 32px;
         }
     }
 
@@ -25,7 +35,6 @@ export const HeaderWrapper = styled.div`
 
         & > ul {
             display: flex;
-            color: white;
             font-size: 13px;
             grid-gap: 1rem;
             opacity: 0.8;

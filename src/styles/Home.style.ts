@@ -1,26 +1,22 @@
 import styled from 'styled-components';
 import homeBgImage from '../assets/images/home-bg-img.png';
+import { basePageStyle } from './general.style';
 
 interface Props {
     elevated: boolean;
 }
 
 export const HomeWrapper = styled.div<Props>`
+    ${basePageStyle}
+    transform: ${(props: Props) => (props.elevated ? 'translateY(-100%)' : 'translateY(0%)')};
     background: #b4000b;
     color: white;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: space-between;
     padding-left: 140px;
-    overflow-y: auto;
-    transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
-    transform: ${(props: Props) => (props.elevated ? 'translateY(-100%)' : 'translateY(0%)')};
+    z-index: 10;
 
     & > div:nth-child(1) {
         z-index: 2;

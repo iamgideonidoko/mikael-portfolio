@@ -1,9 +1,19 @@
 import { memo } from 'react';
 import { FooterWrapper } from '../styles/Footer.style';
 
-const Footer = () => {
+const Footer = ({ activePosition }: { activePosition: number }) => {
+    const isDark = (): boolean => {
+        switch (activePosition) {
+            case 1:
+                return true;
+            case 2:
+                return false;
+            default:
+                return true;
+        }
+    };
     return (
-        <FooterWrapper>
+        <FooterWrapper isDark={isDark()}>
             <div>
                 <span>© 2022 COPYRIGHT.</span>
                 <span>ALL RIGHTS RESERVED.</span>

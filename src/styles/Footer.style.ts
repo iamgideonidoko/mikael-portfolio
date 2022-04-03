@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const FooterWrapper = styled.div`
+interface Props {
+    isDark: boolean;
+}
+
+export const FooterWrapper = styled.div<Props>`
     background: #00000000;
     position: fixed;
     bottom: 0;
@@ -10,8 +14,9 @@ export const FooterWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
-    z-index: 3;
+    transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
+    color: ${(props) => (props.isDark ? 'white' : 'black')};
+    z-index: 20;
 
     & > div:nth-child(1) {
         font-size: 13px;
@@ -36,5 +41,6 @@ export const FooterWrapper = styled.div`
         justify-content: center;
         align-items: center;
         border-top-left-radius: 10px;
+        color: white;
     }
 `;
