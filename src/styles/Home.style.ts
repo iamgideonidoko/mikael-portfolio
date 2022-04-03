@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import homeBgImage from '../assets/images/home-bg-img.png';
 
-export const HomeWrapper = styled.div`
+interface Props {
+    elevated: boolean;
+}
+
+export const HomeWrapper = styled.div<Props>`
     background: #b4000b;
     color: white;
     height: 100%;
@@ -15,8 +19,8 @@ export const HomeWrapper = styled.div`
     justify-content: space-between;
     padding-left: 140px;
     overflow-y: auto;
-    transition: all ease 1s;
-    /* transform: translateY(-100%); */
+    transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
+    transform: ${(props: Props) => (props.elevated ? 'translateY(-100%)' : 'translateY(0%)')};
 
     & > div:nth-child(1) {
         z-index: 2;

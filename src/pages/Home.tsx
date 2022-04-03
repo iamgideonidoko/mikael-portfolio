@@ -1,8 +1,10 @@
+import { memo } from 'react';
 import { HomeWrapper, StatCard } from '../styles/Home.style';
+import { ComponentItem } from '../interfaces/general.interface';
 
-const Home = () => {
+const Home = ({ componentItem, activePosition }: { componentItem: ComponentItem; activePosition: number }) => {
     return (
-        <HomeWrapper className="home-wrapper" onWheel={() => console.log('wheeling...')}>
+        <HomeWrapper id="home" elevated={componentItem.position === activePosition ? false : componentItem.elevated}>
             <div>
                 <h5>MIKAEL MOORE</h5>
                 <h1>
@@ -36,4 +38,9 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default memo(Home, (prevProps, nextProps) => {
+    return (
+        prevProps.activePosition === nextProps.activePosition &&
+        prevProps.componentItem.elevated === nextProps.componentItem.elevated
+    );
+});

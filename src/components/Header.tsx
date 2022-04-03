@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { HeaderWrapper } from '../styles/Header.style';
 import LogoWhite from '../assets/images/logo-white.png';
 import Hamburger from './Hamburger';
@@ -26,4 +27,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default memo(Header);

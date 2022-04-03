@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { FooterWrapper } from '../styles/Footer.style';
 
 const Footer = () => {
@@ -16,4 +17,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default memo(Footer);
