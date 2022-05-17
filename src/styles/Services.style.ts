@@ -1,14 +1,19 @@
 import { basePageStyle } from './general.style';
 import styled from 'styled-components';
 
-export const ServicesWrapper = styled.div`
+interface Props {
+    elevated: boolean;
+}
+
+export const ServicesWrapper = styled.div<Props>`
     ${basePageStyle}
-    border: 1px solid red;
+    transform: ${(props: Props) => (props.elevated ? 'translateY(-100%)' : 'translateY(0%)')};
     z-index: 9;
     display: grid;
     grid-template-columns: auto 1fr;
     padding: 100px 54px;
     grid-gap: 2rem;
+    background-color: white;
 
     & > div:nth-child(1) {
         padding-left: 140px;

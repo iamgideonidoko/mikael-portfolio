@@ -2,10 +2,11 @@ import { memo } from 'react';
 import { ServicesWrapper } from '../styles/Services.style';
 import { ComponentItem } from '../interfaces/general.interface';
 
-const Services = ({ componentItem }: { componentItem: ComponentItem; activePosition: number }) => {
+const Services = ({ componentItem, activePosition }: { componentItem: ComponentItem; activePosition: number }) => {
     console.log(componentItem);
+    const viewActive = componentItem.position === activePosition;
     return (
-        <ServicesWrapper id="services">
+        <ServicesWrapper id="services" elevated={viewActive ? false : componentItem.elevated}>
             <div>
                 <span>
                     6<sup>+</sup>
