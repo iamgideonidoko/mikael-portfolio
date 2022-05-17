@@ -2,9 +2,13 @@ import { memo } from 'react';
 import { ExperienceWrapper } from '../styles/Experience.style';
 import { ComponentItem } from '../interfaces/general.interface';
 
-const Experience = ({ componentItem }: { componentItem: ComponentItem; activePosition: number }) => {
-    console.log(componentItem);
-    return <ExperienceWrapper id="experience">Experience Page</ExperienceWrapper>;
+const Experience = ({ componentItem, activePosition }: { componentItem: ComponentItem; activePosition: number }) => {
+    const viewActive = componentItem.position === activePosition;
+    return (
+        <ExperienceWrapper id="experience" elevated={viewActive ? false : componentItem.elevated}>
+            Experience Page
+        </ExperienceWrapper>
+    );
 };
 
 export default memo(Experience, (prevProps, nextProps) => {

@@ -25,18 +25,44 @@ const App = () => {
             elevated: false,
             position: 3,
         },
+        {
+            id: 'skills',
+            elevated: false,
+            position: 4,
+        },
+        {
+            id: 'portfolio',
+            elevated: false,
+            position: 5,
+        },
+        {
+            id: 'awards',
+            elevated: false,
+            position: 6,
+        },
+        {
+            id: 'testimonials',
+            elevated: false,
+            position: 7,
+        },
+        {
+            id: 'blog',
+            elevated: false,
+            position: 8,
+        },
+        {
+            id: 'contact',
+            elevated: false,
+            position: 9,
+        },
     ]);
     const [activePosition, setActivePosition] = useState<number>(1);
-
-    console.log('components => ', components);
-    console.log('activePosition => ', activePosition);
 
     const nextPage = () => {
         // go to next page
         setComponents((prev) =>
             prev.map((item) => {
-                if (item.position === 1) return { ...item, elevated: true };
-                if (item.position === 2) return { ...item, elevated: true };
+                if (item.position === activePosition) return { ...item, elevated: true };
                 if (item.position >= activePosition) {
                     // === instead
                     return { ...item, elevated: false };
@@ -74,17 +100,14 @@ const App = () => {
             const currentId = components[activePosition - 1]?.id;
             // get current page element
             const currentElement = window.document.querySelector<HTMLElement>(`#${currentId}`);
-            console.log('current element => ', currentElement);
             if (currentElement) {
                 if (e.deltaY > 0) {
-                    console.log('scrolling down');
                     // scrolling down
                     if (currentElement.scrollTop === currentElement.scrollHeight - currentElement.offsetHeight) {
                         // element has scrolled to bottom
                         nextPage();
                     }
                 } else {
-                    console.log('scrolling up');
                     if (currentElement.scrollTop === 0) {
                         // element has scrolled to top
                         previousPage();
@@ -115,19 +138,8 @@ const App = () => {
         }
     };
 
-    // window.document.addEventListener('keydown', (e) => {
-    //     console.log('key down window', e.keyCode);
-    // });
-
     return (
-        <div
-            id="main"
-            className="main"
-            onWheel={handleScroll}
-            onKeyDown={handleKeyDown}
-            tabIndex={1}
-            onClick={() => console.log('clicked')}
-        >
+        <div id="main" className="main" onWheel={handleScroll} onKeyDown={handleKeyDown} tabIndex={1}>
             <Header activePosition={activePosition} />
             <Routes>
                 {/* RouteMain will hold all the components */}
