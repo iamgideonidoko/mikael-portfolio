@@ -37,16 +37,7 @@ const App = () => {
                 // return item;
             }),
         );
-        // setTimeout(() => {
-        //     setComponents((prev) =>
-        //         prev.map((item) => {
-        //             if (item.position >= activePosition) {
-        //                 return { ...item, elevated: false };
-        //             }
-        //             return { ...item, elevated: true };
-        //         }),
-        //     );
-        // }, 1000);
+
         if (activePosition >= 1 && activePosition < components.length) {
             setActivePosition((prev) => prev + 1);
         }
@@ -63,16 +54,7 @@ const App = () => {
                 // return item;
             }),
         );
-        // setTimeout(() => {
-        //     setComponents((prev) =>
-        //         prev.map((item) => {
-        //             if (item.position >= activePosition) {
-        //                 return { ...item, elevated: false };
-        //             }
-        //             return { ...item, elevated: true };
-        //         }),
-        //     );
-        // }, 1000);
+
         if (activePosition > 1 && activePosition <= components.length) {
             setActivePosition((prev) => prev - 1);
         }
@@ -81,13 +63,6 @@ const App = () => {
     const handleScroll: WheelEventHandler<HTMLDivElement> = (e: WheelEvent<HTMLDivElement>) => {
         clearTimeout(scrollerTimer);
         scrollerTimer = setTimeout(() => {
-            // const homeWrapper = document.getElementById('home') as HTMLElement;
-            // const servicesWrapper = document.getElementById('services') as HTMLElement;
-            // console.log('ACTIVE POSITION => ', activePosition);
-            // console.log('COMPONENTS => ', components);
-            // console.log('wheeling...', homeWrapper.scrollHeight, homeWrapper.offsetHeight, homeWrapper.scrollTop);
-            // console.log('Delta => ', e.deltaY);
-            // check if srolling up or down
             if (e.deltaY > 0) {
                 console.log('scrolling down');
                 // scrolling down
@@ -135,6 +110,7 @@ const App = () => {
         >
             <Header activePosition={activePosition} />
             <Routes>
+                {/* RouteMain will hold all the components */}
                 <Route path="/" element={<RouteMain components={components} activePosition={activePosition} />} />
             </Routes>
             <Footer activePosition={activePosition} />

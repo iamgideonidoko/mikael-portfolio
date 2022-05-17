@@ -3,8 +3,9 @@ import { HomeWrapper, StatCard } from '../styles/Home.style';
 import { ComponentItem } from '../interfaces/general.interface';
 
 const Home = ({ componentItem, activePosition }: { componentItem: ComponentItem; activePosition: number }) => {
+    const viewActive = componentItem.position === activePosition;
     return (
-        <HomeWrapper id="home" elevated={componentItem.position === activePosition ? false : componentItem.elevated}>
+        <HomeWrapper id="home" elevated={viewActive ? false : componentItem.elevated}>
             <div>
                 <h5>MIKAEL MOORE</h5>
                 <h1>
@@ -31,7 +32,7 @@ const Home = ({ componentItem, activePosition }: { componentItem: ComponentItem;
             <div></div>
             <div className="home-bg-wrapper">
                 <div className="home-img-bg"></div>
-                <div className="home-circle-bg"></div>
+                <div className={`home-circle-bg ${viewActive ? 'view-active' : ''}`}></div>
             </div>
             {/* <div className="home-pattern-bg"></div> */}
         </HomeWrapper>

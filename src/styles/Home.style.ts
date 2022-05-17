@@ -91,10 +91,15 @@ export const HomeWrapper = styled.div<Props>`
         width: 65rem;
         height: 65rem;
         bottom: -25rem;
-        right: -22rem;
+        right: -100vw;
         background-color: #ab010d;
         border-radius: 100rem;
         z-index: 0;
+        transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
+    }
+
+    & .home-circle-bg.view-active {
+        right: -22rem !important;
     }
 `;
 
