@@ -20,21 +20,23 @@ const Services = ({ componentItem }: { componentItem: ComponentItem; activePosit
                     <span>UI/UX, Branding and digital designs</span>.
                 </h4>
 
-                <ul>
+                <ul className="main-services">
                     <li>
                         <a href="#">Web Design</a>
                         <p>
                             Fill appear won't may make moveth signs. Fourth. Good own. Green you're moveth us, lesser.
-                            Set grass life years subdue. DISCOVER MORE 🡒
+                            Set grass life years subdue.
                         </p>
-                        <a href="#">Discover More</a>
+                        <a href="#">
+                            Discover More <span>🡒</span>
+                        </a>
                     </li>
 
                     <li>
                         <a href="#">Branding</a>
                         <p>
                             Fill appear won't may make moveth signs. Fourth. Good own. Green you're moveth us, lesser.
-                            Set grass life years subdue. DISCOVER MORE 🡒
+                            Set grass life years subdue.
                         </p>
                         <a href="#">Discover More</a>
                     </li>
@@ -43,7 +45,7 @@ const Services = ({ componentItem }: { componentItem: ComponentItem; activePosit
                         <a href="#">Illustration</a>
                         <p>
                             Fill appear won't may make moveth signs. Fourth. Good own. Green you're moveth us, lesser.
-                            Set grass life years subdue. DISCOVER MORE 🡒
+                            Set grass life years subdue.
                         </p>
                         <a href="#">Discover More</a>
                     </li>
@@ -52,7 +54,7 @@ const Services = ({ componentItem }: { componentItem: ComponentItem; activePosit
                         <a href="#">Marketing</a>
                         <p>
                             Fill appear won't may make moveth signs. Fourth. Good own. Green you're moveth us, lesser.
-                            Set grass life years subdue. DISCOVER MORE 🡒
+                            Set grass life years subdue.
                         </p>
                         <a href="#">Discover More</a>
                     </li>
