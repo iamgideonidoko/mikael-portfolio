@@ -20,7 +20,7 @@ const Footer = ({ activePosition }: { activePosition: number }) => {
             </div>
             <div>
                 <div className="page-count-box">
-                    <span>02</span>
+                    <span>0{activePosition}</span>
                 </div>
             </div>
         </FooterWrapper>
