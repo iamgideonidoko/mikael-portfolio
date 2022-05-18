@@ -14,95 +14,38 @@ const Experience = ({ componentItem, activePosition }: { componentItem: Componen
                 <div>
                     <h1>Experience</h1>{' '}
                     <div>
-                        <button>🡐</button> <span>1 / 3</span> <button>🡒</button>
+                        <span>🡐</span> <span>1 / 3</span> <span>🡒</span>
                     </div>
                 </div>
-                <div className="slider-container">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>2010-2012</td>
-                                <td>Graphic Designer, Art &amp; Co,</td>
-                                <td>
-                                    Which firmament dominion first rule and tree. The seas he i were cattle Under
-                                    living. It may beast eveery forth place.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2010-2012</td>
-                                <td>Graphic Designer, Art &amp; Co,</td>
-                                <td>
-                                    Which firmament dominion first rule and tree. The seas he i were cattle Under
-                                    living. It may beast eveery forth place.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2010-2012</td>
-                                <td>Graphic Designer, Art &amp; Co,</td>
-                                <td>
-                                    Which firmament dominion first rule and tree. The seas he i were cattle Under
-                                    living. It may beast eveery forth place.
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>2010-2012</td>
-                                <td>Graphic Designer, Art &amp; Co,</td>
-                                <td>
-                                    Which firmament dominion first rule and tree. The seas he i were cattle Under
-                                    living. It may beast eveery forth place.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2010-2012</td>
-                                <td>Graphic Designer, Art &amp; Co,</td>
-                                <td>
-                                    Which firmament dominion first rule and tree. The seas he i were cattle Under
-                                    living. It may beast eveery forth place.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2010-2012</td>
-                                <td>Graphic Designer, Art &amp; Co,</td>
-                                <td>
-                                    Which firmament dominion first rule and tree. The seas he i were cattle Under
-                                    living. It may beast eveery forth place.
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>2010-2012</td>
-                                <td>Graphic Designer, Art &amp; Co,</td>
-                                <td>
-                                    Which firmament dominion first rule and tree. The seas he i were cattle Under
-                                    living. It may beast eveery forth place.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2010-2012</td>
-                                <td>Graphic Designer, Art &amp; Co,</td>
-                                <td>
-                                    Which firmament dominion first rule and tree. The seas he i were cattle Under
-                                    living. It may beast eveery forth place.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2010-2012</td>
-                                <td>Graphic Designer, Art &amp; Co,</td>
-                                <td>
-                                    Which firmament dominion first rule and tree. The seas he i were cattle Under
-                                    living. It may beast eveery forth place.
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>2010-2012</td>
+                            <td>Graphic Designer, Art &amp; Co,</td>
+                            <td>
+                                Which firmament dominion first rule and tree. The seas he i were cattle Under living. It
+                                may beast eveery forth place.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2010-2012</td>
+                            <td>Graphic Designer, Art &amp; Co,</td>
+                            <td>
+                                Which firmament dominion first rule and tree. The seas he i were cattle Under living. It
+                                may beast eveery forth place.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2010-2012</td>
+                            <td>Graphic Designer, Art &amp; Co,</td>
+                            <td>
+                                Which firmament dominion first rule and tree. The seas he i were cattle Under living. It
+                                may beast eveery forth place.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button className="resume-btn">Download Resume ⬇</button>
             </div>
         </ExperienceWrapper>
     );
