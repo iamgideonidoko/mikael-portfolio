@@ -12,11 +12,17 @@ export const HomeWrapper = styled.div<Props>`
   background: #b4000b;
   color: white;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+  /* grid-template-columns: 1fr; */
+  align-items: flex-end;
   justify-content: space-between;
   padding-left: 140px;
   z-index: 10;
+
+  @media screen and (max-width: 700px) {
+    & {
+      padding: 1rem;
+    }
+  }
 
   & > div:nth-child(1) {
     z-index: 2;
