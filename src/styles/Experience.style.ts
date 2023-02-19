@@ -1,18 +1,26 @@
 import styled from 'styled-components';
 import { basePageStyle } from './general.style';
 import { viewTransition } from './variables.style';
+import experienceBg from '../assets/images/experiencebg.jpg';
 
 interface Props {
   elevated: boolean;
+  viewActive: boolean;
 }
 
 export const ExperienceWrapper = styled.div<Props>`
   ${basePageStyle}
   transform: ${(props: Props) => (props.elevated ? 'translateY(-100%)' : 'translateY(0%)')};
   padding: 100px 54px;
-  background-color: salmon;
+  background-color: black;
   z-index: 8;
   position: relative;
+  background-image: url(${experienceBg});
+  background-repeat: no-repeat;
+  /* background-size: 100vw 100vh; */
+  background-size: ${(props: Props) => (props.viewActive ? '100vw 100vh' : '150vw 150vh')};
+  background-attachment: fixed;
+  background-position: center;
 
   .experience-bg {
     position: absolute;
@@ -21,6 +29,7 @@ export const ExperienceWrapper = styled.div<Props>`
     width: 100%;
     overflow: hidden;
     z-index: 0;
+    display: none;
 
     img {
       display: block;

@@ -7,6 +7,7 @@ export const basePageStyle = css`
   height: 100%;
   width: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
 
   /* width */

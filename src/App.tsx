@@ -64,7 +64,7 @@ const App = () => {
     }
   };
 
-  const handleScroll: WheelEventHandler<HTMLDivElement> = (e: WheelEvent<HTMLDivElement>) => {
+  const handleMouseWheel: WheelEventHandler<HTMLDivElement> = (e: WheelEvent<HTMLDivElement>) => {
     clearTimeout(scrollerTimer);
     scrollerTimer = setTimeout(() => {
       const currentId = components[activePosition - 1]?.id;
@@ -73,7 +73,7 @@ const App = () => {
       if (currentElement) {
         if (e.deltaY > 0) {
           // scrolling down
-          if (currentElement.scrollTop === currentElement.scrollHeight - currentElement.offsetHeight) {
+          if (currentElement.scrollTop + 2 >= currentElement.scrollHeight - currentElement.offsetHeight) {
             // element has scrolled to bottom
             nextPage();
           }
@@ -109,7 +109,7 @@ const App = () => {
   };
 
   return (
-    <div id="main" className="main" onWheel={handleScroll} onKeyDown={handleKeyDown} tabIndex={1}>
+    <div id="main" className="main" onWheel={handleMouseWheel} onKeyDown={handleKeyDown} tabIndex={1}>
       <Header activePosition={activePosition} />
       <Routes>
         {/* RouteMain will hold all the components */}

@@ -6,7 +6,7 @@ import experienceBg from '../assets/images/experiencebg.jpg';
 const Experience = ({ componentItem, activePosition }: { componentItem: ComponentItem; activePosition: number }) => {
   const viewActive = componentItem.position === activePosition;
   return (
-    <ExperienceWrapper id="experience" elevated={viewActive ? false : componentItem.elevated}>
+    <ExperienceWrapper id="experience" viewActive={viewActive} elevated={viewActive ? false : componentItem.elevated}>
       <div className={`experience-bg ${viewActive ? 'view-active' : ''}`}>
         <img src={experienceBg} />
       </div>
